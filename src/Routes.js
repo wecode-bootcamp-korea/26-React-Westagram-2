@@ -16,24 +16,22 @@ import MainYounbee from './pages/younbee/Main/Main';
 class Routes extends Component {
   render() {
     return (
-      <>
-        <Nav />
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/login-choi" component={LoginChoi} />
-            <Route exact path="/Main-choi" component={MainChoi} />
+      <BrowserRouter>
+        <Route path="/main" component={Nav} />
+        <Switch>
+          <Route exact path="/login-choi" component={LoginChoi} />
+          <Route path="main/main-choi" component={MainChoi} />
 
-            <Route exact path="/login-jiwan" component={LoginJiwan} />
-            <Route exact path="/Main-jiwan" component={MainJiwan} />
+          <Route exact path="/login-jiwan" component={LoginJiwan} />
+          <Route path="main/main-jiwan" component={MainJiwan} />
 
-            <Route exact path="/login-yeju" component={LoginYeju} />
-            <Route exact path="/Main-yeju" component={MainYeju} />
+          <Route exact path="/login-yeju" component={LoginYeju} />
+          <Route path="main/Main-yeju" component={MainYeju} />
 
-            <Route exact path="/login-younbee" component={LoginYounbee} />
-            <Route exact path="/Main-younbee" component={MainYounbee} />
-          </Switch>
-        </BrowserRouter>
-      </>
+          <Route exact path="/login-younbee" component={LoginYounbee} />
+          <Route path="main/main-younbee" component={MainYounbee} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
