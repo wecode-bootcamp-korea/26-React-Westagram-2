@@ -1,22 +1,23 @@
-import { React, Component } from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
+import { React, Component } from 'react';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 
-import LoginChoi from "./pages/byeonghyeon/Login/Login";
-import MainChoi from "./pages/byeonghyeon/Main/Main";
+import LoginChoi from './pages/byeonghyeon/Login/Login';
+import MainChoi from './pages/byeonghyeon/Main/Main';
 
-import LoginJiwan from "./pages/jiwan/Login/Login";
-import MainJiwan from "./pages/jiwan/Main/Main";
+import LoginJiwan from './pages/jiwan/Login/Login';
+import MainJiwan from './pages/jiwan/Main/Main';
 
-import LoginYeju from "./pages/yeju/Login/Login";
-import MainYeju from "./pages/yeju/Main/Main";
+import LoginYeju from './pages/yeju/Login/Login';
+import MainYeju from './pages/yeju/Main/Main';
 
-import LoginYounbee from "./pages/younbee/Login/Login";
-import MainYounbee from "./pages/younbee/Main/Main";
+import LoginYounbee from './pages/younbee/Login/Login';
+import MainYounbee from './pages/younbee/Main/Main';
 class Routes extends Component {
   render() {
     return (
-      <Nav>
+      <>
+        <Nav />
         <BrowserRouter>
           <Switch>
             <Route exact path="/login-choi" component={LoginChoi} />
@@ -32,7 +33,7 @@ class Routes extends Component {
             <Route exact path="/Main-younbee" component={MainYounbee} />
           </Switch>
         </BrowserRouter>
-      </Nav>
+      </>
     );
   }
 }

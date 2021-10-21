@@ -1,7 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 * {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+body {
+  background-color: #fafafa;
+  /* text-align: center; */
+}
+.logo {
+  font-family: 'Lobster', cursive;
+  color: #262626;
+}
+input {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  width: 100%;
+  /* max-width: 100px; */
+  text-overflow: ellipsis;
+  &::placeholder {
+    color: #ced4da;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+figure {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.profile-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333;
 }
