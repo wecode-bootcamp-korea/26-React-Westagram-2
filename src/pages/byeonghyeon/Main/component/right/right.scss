@@ -1,0 +1,152 @@
+.main-right {
+  position: fixed;
+  left: 640px;
+  .main-right-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    padding-left: 2px;
+    .header-item-photo {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      background-image: url(../../../assets/images/IMG_1402.JPG);
+    }
+    .header-item-account p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      &:nth-child(1) {
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        margin-top: 1.5px;
+        color: #adb5bd;
+      }
+    }
+  }
+  .story-container {
+    width: 260px;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    background: #fff;
+    @at-root .front {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 13px;
+      margin: 10px 0;
+      font-size: 11px;
+      font-weight: bold;
+      span:nth-child(1) {
+        color: #adb5bd;
+      }
+      span:nth-child(2) {
+        color: #495057;
+      }
+    }
+    .story-list {
+      width: 87%;
+      margin: 0 auto;
+      .story-list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        .story {
+          margin-right: 8px;
+          .story-circle {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1.8px solid transparent;
+            background-image: linear-gradient(#fff, #f1f1f1),
+              linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          }
+          .story-profile {
+            background-image: url(../../../assets/images/IMG_1402.JPG);
+            width: 26px;
+            height: 26px;
+          }
+        }
+        .story-account-name p {
+          font-family: 'Roboto', sans-serif;
+          &:nth-child(1) {
+            font-weight: bold;
+            font-size: 10px;
+          }
+          &:nth-child(2) {
+            margin-top: 4px;
+            font-size: 9.5px;
+            color: #adb5bd;
+          }
+        }
+      }
+    }
+  }
+  .recommend-container {
+    width: 260px;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    background: #fff;
+    & .front {
+      margin-bottom: 18px;
+    }
+    .recommend-list {
+      width: 95%;
+      margin: 0 auto;
+      padding-left: 10px;
+      .recommend-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        .recommend {
+          display: flex;
+          align-items: center;
+          margin-right: 8px;
+          .recommend-profile {
+            background-image: url(../../../assets/images/IMG_1402.JPG);
+            width: 28px;
+            height: 28px;
+          }
+          .recommend-account-name {
+            margin-left: 5px;
+            & p {
+              font-family: 'Roboto', sans-serif;
+              &:nth-child(1) {
+                font-weight: bold;
+                font-size: 10px;
+              }
+              &:nth-child(2) {
+                margin-top: 3px;
+                font-size: 9.5px;
+                color: #adb5bd;
+              }
+            }
+          }
+        }
+        .follow-btn {
+          color: #5eb6f7;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.main-right-footer {
+  width: 260px;
+  height: 200px;
+  & p {
+    color: #ced4da;
+    letter-spacing: -0.5px;
+    line-height: -1px;
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+}
