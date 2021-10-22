@@ -69,14 +69,18 @@
         }
       }
       .comment-container {
+        width: 100%;
         display: flex;
         padding-left: 25px;
         margin-top: 4px;
         margin-bottom: 10px;
         height: fit-content;
+        .comment-list {
+          width: 100%;
+        }
         .comment-item {
           display: flex;
-          width: 460px;
+          width: 100%;
           justify-content: space-between;
           /* align-items: center; */
           .feed-bottom-account {
@@ -90,6 +94,8 @@
             font-size: 13px;
           }
           .comment-heart {
+            position: absolute;
+            left: 53.5%;
             width: 10px;
             height: 10px;
           }

@@ -15,6 +15,7 @@ class Feeds extends Component {
 
   storeItem = event => {
     if (event.target !== this.btnRef && event.keyCode !== 13) return;
+    if (this.state.val === '') return;
     this.setState({
       comments: [...this.state.comments, this.state.val], // (o)
       // this.state.comments.concat(this.state.val) (o)
@@ -22,6 +23,9 @@ class Feeds extends Component {
       //불변성 유지
     });
     this.inputRef.value = '';
+    this.setState({
+      val: '',
+    });
   };
 
   inputComment = event => {
