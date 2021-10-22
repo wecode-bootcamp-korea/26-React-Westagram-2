@@ -1,5 +1,4 @@
 import { React, Component } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 
 import LoginChoi from './pages/byeonghyeon/Login/Login';
@@ -13,27 +12,28 @@ import MainYeju from './pages/yeju/Main/Main';
 
 import LoginYounbee from './pages/younbee/Login/Login';
 import MainYounbee from './pages/younbee/Main/Main';
+
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+
 class Routes extends Component {
   render() {
     return (
-      <>
+      <BrowserRouter>
         <Nav />
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/login-choi" component={LoginChoi} />
-            <Route exact path="/Main-choi" component={MainChoi} />
+        <Switch>
+          <Route exact path="/login/choi" component={LoginChoi} />
+          <Route exact path="/main/choi" component={MainChoi} />
 
-            <Route exact path="/login-jiwan" component={LoginJiwan} />
-            <Route exact path="/Main-jiwan" component={MainJiwan} />
+          <Route exact path="/login/jiwan" component={LoginJiwan} />
+          <Route exact path="/main/jiwan" component={MainJiwan} />
 
-            <Route exact path="/login-yeju" component={LoginYeju} />
-            <Route exact path="/Main-yeju" component={MainYeju} />
+          <Route exact path="/login/yeju" component={LoginYeju} />
+          <Route exact path="/main/yeju" component={MainYeju} />
 
-            <Route exact path="/login-younbee" component={LoginYounbee} />
-            <Route exact path="/Main-younbee" component={MainYounbee} />
-          </Switch>
-        </BrowserRouter>
-      </>
+          <Route exact path="/login/younbee" component={LoginYounbee} />
+          <Route exact path="/main/younbee" component={MainYounbee} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
