@@ -1,0 +1,11 @@
+@import '../common.scss';
+
+.main {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  margin-top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}

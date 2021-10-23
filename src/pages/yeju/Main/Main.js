@@ -1,9 +1,17 @@
 import { React, Component } from 'react';
 
-class MainYeju extends Component {
+import Feeds from './Feeds/Feeds.js';
+import MainRight from './MainRight/MainRight.js';
+import './Main.scss';
+
+class Main extends Component {
   render() {
-    return <div>choi입니다</div>;
+    return (
+      <div className="main">
+        <Feeds />
+        <MainRight />
+      </div>
+    );
   }
 }
-
-export default MainYeju;
+export default Main;
