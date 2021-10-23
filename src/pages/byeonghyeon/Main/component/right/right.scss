@@ -1,6 +1,9 @@
 .main-right {
   position: fixed;
   left: 640px;
+  @media (min-width: 1280px) {
+    left: 900px;
+  }
   .main-right-header {
     display: flex;
     align-items: center;

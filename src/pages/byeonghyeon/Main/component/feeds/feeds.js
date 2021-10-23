@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Comment from '../comment';
+import CommentList from '../commentList';
 import './feeds.scss';
 
 class Feeds extends Component {
@@ -7,36 +7,36 @@ class Feeds extends Component {
     super(props);
     this.state = {
       val: '',
-      comments: [],
     };
+    this.tmp = '';
     this.inputRef = null;
     this.btnRef = null;
   }
 
   storeItem = event => {
     if (event.target !== this.btnRef && event.keyCode !== 13) return;
-    if (this.state.val === '') return;
+    if (this.tmp === '') return;
     this.setState({
-      comments: [...this.state.comments, this.state.val], // (o)
+      // comments: [...comments, val], // (o)
       // this.state.comments.concat(this.state.val) (o)
       // this.state.comments.push(this.state.val) (x)
       //불변성 유지
+      val: this.tmp,
     });
     this.inputRef.value = '';
+    this.inputRef.focus();
     this.setState({
       val: '',
     });
   };
 
   inputComment = event => {
-    let val = event.target.value;
-    if (val.length === '') return;
-    this.setState({
-      val,
-    });
+    this.tmp += event.target.value;
+    if (this.tmp.length === '') return;
   };
 
   render() {
+    let { val } = this.state;
     return (
       <div className="feeds">
         <article className="feed">
@@ -80,7 +80,7 @@ class Feeds extends Component {
             </div>
             <div className="comment-container">
               <ul className="comment-list">
-                <Comment comments={this.state.comments} />
+                <CommentList comment={val} />
               </ul>
             </div>
             <div className="feed-bottom-date">

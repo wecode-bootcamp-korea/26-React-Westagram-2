@@ -31,6 +31,9 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media (min-width: 1280px) {
+        height: 370px;
+      }
     }
     .feed-func-container {
       display: flex;
@@ -98,6 +101,9 @@
             left: 53.5%;
             width: 10px;
             height: 10px;
+            @media (min-width: 1280px) {
+              left: 53%;
+            }
           }
         }
       }

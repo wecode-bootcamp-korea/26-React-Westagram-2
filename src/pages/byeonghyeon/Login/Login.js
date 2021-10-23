@@ -15,11 +15,13 @@ class LoginChoi extends Component {
   };
 
   goMain = () => {
-    this.props.history.push('/main/choi');
+    let { history } = this.props;
+    history.push('/main/choi');
   };
 
   checkInput = () => {
-    this.regExp.test(this.state.id) && this.state.pwd.length >= 5
+    let { id, pwd } = this.state;
+    this.regExp.test(id) && pwd.length >= 5
       ? (this.isVal = true)
       : (this.isVal = false);
     return this.isVal;
@@ -37,7 +39,7 @@ class LoginChoi extends Component {
         pwd: event.target.value,
       });
     }
-    console.log(this.state.id, this.state.pwd); // batchedUpdate
+    // console.log(this.state.id, this.state.pwd); // batchedUpdate
     // if((this.state.id && this.state.pwd) !== '') {
     //     console.log(this.btn.style);
     //     this.btn.style.backgroundColor = '#0095f6';
@@ -45,6 +47,7 @@ class LoginChoi extends Component {
   };
 
   render() {
+    let { id, pwd } = this.state;
     return (
       <section className="login-container">
         <header className="login-header">
@@ -65,13 +68,9 @@ class LoginChoi extends Component {
           </div>
           <button
             onClick={this.goMain}
-            disabled={
-              (this.state.id && this.state.pwd) !== '' && this.checkInput()
-                ? false
-                : true
-            }
+            disabled={(id && pwd) !== '' && this.checkInput() ? false : true}
             style={
-              (this.state.id && this.state.pwd) !== '' && this.checkInput()
+              (id && pwd) !== '' && this.checkInput()
                 ? { backgroundColor: '#0095f6' }
                 : { backgroundColor: '#b9dffc' }
             }
