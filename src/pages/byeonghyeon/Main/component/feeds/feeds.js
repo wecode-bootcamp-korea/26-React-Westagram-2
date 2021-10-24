@@ -45,7 +45,7 @@ class Feeds extends Component {
                 <div className="profile-left">
                   <figure
                     style={{
-                      backgroundImage: `url(/pages/byeonghyeon/assets/images/IMG_1.JPG)`,
+                      backgroundImage: `url(${profileImg})`,
                     }}
                     className="profile-item-photo"
                   />
@@ -61,7 +61,7 @@ class Feeds extends Component {
               </div>
               <div
                 style={{
-                  backgroundImage: `url(../../../assets/images/IMG_1402.JPG)`,
+                  backgroundImage: `url(${feedImg})`,
                 }}
                 className="feed-img"
               />
