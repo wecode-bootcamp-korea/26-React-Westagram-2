@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Comments from '../comments';
+import Comments from './comments';
 
 class CommentList extends Component {
   constructor(props) {
