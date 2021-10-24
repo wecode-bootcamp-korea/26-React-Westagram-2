@@ -1,0 +1,20 @@
+@font-face {
+  font-family: instagramFont;
+  src: url('../assets/westagram.ttf') format('opentype');
+}
+
+@mixin icon-size() {
+  width: 30px;
+  height: 30px;
+}
+@import '../compoonents/Main/Feed/Feed.scss';
+@import '../compoonents/Main/Main-Right/MainRight.scss';
+#root {
+  height: 100vh;
+
+  .main-wrapper {
+    height: 100%;
+    @extend Feed !optional;
+  }
+  @extend MainRight !optional;
+}
