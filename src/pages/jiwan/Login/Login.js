@@ -29,13 +29,13 @@ class Login extends Component {
         <title>Westagram!</title>
         <link rel="stylesheet" href="/login.css" type="text/css" />
 
-        <div class="login-wrapper">
-          <div class="logo">
-            <p class="westagram">Westagram</p>
+        <div className="login-wrapper">
+          <div className="logo">
+            <p className="westagram">Westagram</p>
           </div>
 
-          <div class="login-container">
-            <div class="id">
+          <div className="login-container">
+            <div className="id">
               <input
                 onChange={this.handleIdnput}
                 type="text"
@@ -44,7 +44,7 @@ class Login extends Component {
               />
             </div>
 
-            <div class="pw">
+            <div className="pw">
               <input
                 onChange={this.handlePwInput}
                 type="password"
@@ -53,13 +53,28 @@ class Login extends Component {
               />
             </div>
 
-            <div class="bt">
-              <button class="login-btn">Log in</button>
+            <div className="bt">
+              <button
+                className={
+                  this.state.inputIdValue.indexOf('@') !== -1 &&
+                  this.state.inputPwValue.length >= 5
+                    ? 'buttonAble'
+                    : 'buttonDisable'
+                }
+                dissabled={
+                  this.state.inputIdValue.indexOf('@') !== -1 &&
+                  this.state.inputPwValue.length >= 5
+                    ? false
+                    : true
+                }
+              >
+                Log in
+              </button>
             </div>
           </div>
 
-          <div class="click">
-            <a class="find-password">Forgot Password</a>
+          <div className="click">
+            <a claclassName="find-password">Forgot Password</a>
           </div>
         </div>
       </div>

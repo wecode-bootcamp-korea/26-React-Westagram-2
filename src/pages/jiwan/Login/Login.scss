@@ -61,10 +61,17 @@
     }
 
     .bt {
-      .login-btn {
+      .buttonAble {
+        @include button-layout(#5ca7ee);
+        padding-left: 0px;
+        cursor: pointer;
+      }
+
+      .buttonDisable {
         @include button-layout(#b2dffc);
         padding-left: 0px;
         cursor: pointer;
+        opacity: 0.3;
       }
     }
   }
