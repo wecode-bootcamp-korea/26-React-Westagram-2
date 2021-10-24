@@ -9,6 +9,11 @@ class CommentList extends Component {
     };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.content === '') return null;
+    else return { comments: prevState.comments.concat(nextProps) };
+  }
+
   componentDidMount() {
     fetch('http://localhost:3000/data/commentData.json', {
       method: 'GET',
@@ -22,20 +27,12 @@ class CommentList extends Component {
   }
 
   render() {
-    let { comment } = this.props;
     let { comments } = this.state;
 
     return (
       <>
-        {comments.map(({ id, username, content, isLiked }) => {
-          return (
-            <Comments
-              key={id}
-              name={username}
-              comment={content}
-              isLiked={isLiked}
-            />
-          );
+        {comments.map(({ userName, content }, index) => {
+          return <Comments key={index} name={userName} comment={content} />;
         })}
       </>
     );

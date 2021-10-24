@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "choi_95",
+    "profileImg": "../../../assets/images/IMG_1405.JPG",
+    "feedImg": "../../../assets/images/IMG_1405.JPG"
+  },
+  {
+    "id": 2,
+    "userName": "orange_96",
+    "profileImg": "/assets/images/IMG_1.JPG",
+    "feedImg": "../../../assets/images/IMG_6941.JPG"
+  },
+  {
+    "id": 3,
+    "userName": "apple_90",
+    "profileImg": "../../../assets/images/IMG_2.JPG",
+    "feedImg": "../../../assets/images/IMG_6944.JPG"
+  }
+]
