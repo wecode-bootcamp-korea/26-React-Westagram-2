@@ -1,0 +1,114 @@
+@import '../../common.scss';
+
+.feeds {
+  .container {
+    margin-top: 150px;
+    border: 1px solid lightgray;
+    width: 800px;
+    background-color: white;
+
+    .line {
+      display: flex;
+      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 15px;
+
+      img {
+        width: 45px;
+        height: 45px;
+        margin: 15px 20px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .text1 {
+        position: absolute;
+        margin-left: 80px;
+        margin-top: 1px;
+      }
+
+      .seemore {
+        margin-right: -10px;
+      }
+    }
+
+    .photo img {
+      width: 100%;
+    }
+
+    .heart {
+      display: flex;
+      justify-content: space-between;
+
+      .heart-box {
+        .redHeart {
+          margin-left: 15px;
+          margin-bottom: 155px;
+          width: 32px;
+        }
+        .talk {
+          margin-left: 0px;
+          margin-bottom: 147px;
+          width: 50px;
+        }
+        .save {
+          margin-left: -10px;
+          margin-bottom: 145px;
+          width: 50px;
+        }
+        .tag {
+          margin-bottom: 155px;
+          margin-left: 615px;
+          width: 35px;
+        }
+      }
+    }
+
+    .heart_line {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 950px;
+      margin-left: 8px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .many_lines {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1000px;
+      margin-left: 60px;
+
+      ul {
+        margin-top: 10px;
+        margin-left: -35px;
+        list-style: none;
+      }
+    }
+
+    .comment {
+      display: flex;
+
+      input {
+        width: 93%;
+        margin-left: 10px;
+        height: 50px;
+        border: 1px solid white;
+        background-color: white;
+      }
+    }
+
+    hr {
+      border: 1px solid lightgray;
+      margin-top: 130px;
+    }
+  }
+}
