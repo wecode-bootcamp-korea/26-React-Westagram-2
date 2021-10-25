@@ -47,7 +47,7 @@
     height: 32px;
     text-align: center;
     font-size: 14px;
-    background-color: #b2dffc;
+    // background-color: #b8daf9;
     color: white;
     border: 1px solid #b2dffc;
     border-radius: 6px;
@@ -55,6 +55,16 @@
     top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @at-root .activebtn {
+      background-color: #5ca7ee;
+      // background-color: red;
+    }
+
+    @at-root .unactivebtn {
+      background-color: #b8daf9;
+      // background-color: red;
+    }
   }
 
   .bottomText {

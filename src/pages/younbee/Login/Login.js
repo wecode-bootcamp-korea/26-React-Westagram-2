@@ -9,22 +9,30 @@ class LoginYounbee extends Component {
     this.state = {
       inputId: '',
       inputPw: '',
+      loginButton: false,
     };
   }
 
   handleIdInput = event => {
     this.setState({
-      inputId: `${event.target.value}`,
+      inputId: event.target.value,
     });
   };
 
-  handleIdInput = event => {
+  handlePwInput = event => {
     this.setState({
-      inputPw: `${event.target.value}`,
+      inputPw: event.target.value,
     });
+  };
+
+  checkValid = () => {
+    this.state.inputId.includes('@') && this.state.inputPw.length >= 4
+      ? this.setState({ loginButton: true })
+      : this.setState({ loginButton: false });
   };
 
   render() {
+    console.log(this.state.loginButton);
     return (
       <div className="login-container">
         <div className="frontText">westagram</div>
@@ -33,14 +41,20 @@ class LoginYounbee extends Component {
           id="password"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={this.handleIdInput}
+          onKeyUp={this.checkValid}
         />
         <input
           type="password"
           id="re-password"
           placeholder="비밀번호"
-          onChange={this.handleIdInput}
+          onChange={this.checkValid}
+          onKeyUp={this.handlePwInput}
         />
-        <button className="login-btn">
+        <button
+          className={`login-btn ${
+            this.state.loginButton ? 'activebtn' : 'unactivebtn'
+          }`}
+        >
           <Link to="/main/younbee">로그인</Link>
         </button>
         <div className="bottomText">비밀번호를 잊으셨나요?</div>
@@ -48,5 +62,4 @@ class LoginYounbee extends Component {
     );
   }
 }
-
 export default LoginYounbee;
