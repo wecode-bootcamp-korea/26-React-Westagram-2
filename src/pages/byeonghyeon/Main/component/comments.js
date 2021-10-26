@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Comments extends Component {
   render() {
@@ -17,9 +18,9 @@ class Comments extends Component {
     return (
       <li className="comment-item">
         <div className="comment">
-          <a href="#" className="feed-bottom-account profile-name">
+          <Link to="/login/choi" className="feed-bottom-account profile-name">
             {name}
-          </a>
+          </Link>
           <span className="comment-content">{comment}</span>
           {isSkip && addVal}
         </div>

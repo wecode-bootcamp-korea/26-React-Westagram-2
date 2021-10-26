@@ -16,10 +16,6 @@ class Bottom extends Component {
     if (this.inputRef.value === '') return;
 
     this.setState({
-      // comments: [...comments, val], // (o)
-      // this.state.comments.concat(this.state.val) (o)
-      // this.state.comments.push(this.state.val) (x)
-      //불변성 유지
       val: this.inputRef.value,
     });
     this.inputRef.value = '';

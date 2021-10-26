@@ -6,8 +6,10 @@ import './Nav.scss';
 
 class Nav extends Component {
   isLoginView() {
-    if (matchPath(this.props.location.pathname, { path: '/login/:username' }))
-      return true;
+    let {
+      location: { pathname },
+    } = this.props;
+    if (matchPath(pathname, { path: '/login/:username' })) return true;
     else return false;
   }
 
