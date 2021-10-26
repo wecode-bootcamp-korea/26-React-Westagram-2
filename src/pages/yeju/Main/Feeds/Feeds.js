@@ -2,7 +2,45 @@ import React, { Component } from 'react';
 import './Feeds.scss';
 
 class Feeds extends Component {
+  constructor() {
+    super();
+    this.state = {
+      cm: '',
+      commentList: [],
+    };
+  }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  clickComment = e => {
+    this.setState({
+      commentList: this.state.commentList.concat(this.state.cm),
+      cm: '',
+    });
+  };
+  handleKeyPress = e => {
+    if (e.key === 'Enter') {
+      this.clickComment();
+    }
+  };
+
+  changeBgColor = () => {
+    return this.state.cm.length > 0 ? 'btnComment_on' : 'btnComment';
+  };
+
   render() {
+    const { cm, commentList } = this.state;
+
+    const newCommentList = commentList.map((value, i) => (
+      <li className="inputCmt" key={i}>
+        <span className="bold">yeju </span> {value}
+      </li>
+    ));
+
     return (
       <article className="feeds">
         <div className="feeds-title">
@@ -47,18 +85,27 @@ class Feeds extends Component {
               <span className="feedDscMore">더 보기</span>
             </div>
             <div id="CMT_WRITE" className="feedComment" />
+            <ul>
+              <li>{newCommentList}</li>
+            </ul>
             <p className="feedTime">42분 전</p>
           </div>
         </div>
         <div className="comment">
           <input
-            id="feedComment"
             className="inputComment"
             type="text"
-            name="id"
+            name="cm"
+            onChange={this.handleChange}
+            onKeyPress={this.handleKeyPress}
+            value={cm}
             placeholder="댓글 달기..."
           />
-          <button id="feedButton" className="btnComment" type="button" disabled>
+          <button
+            type="button"
+            className={this.changeBgColor()}
+            onClick={this.clickComment}
+          >
             게시
           </button>
         </div>

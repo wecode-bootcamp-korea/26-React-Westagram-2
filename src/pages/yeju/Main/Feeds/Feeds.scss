@@ -81,6 +81,14 @@
           color: #8e8e8e;
         }
       }
+      .inputCmt {
+        margin: 8px 0 8px 0;
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+
       .feedTime {
         margin-bottom: 5px;
         color: #8e8e8e;
@@ -105,6 +113,17 @@
       top: 20px;
       right: 5px;
       color: #b8e2fd;
+      background-color: transparent;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .btnComment_on {
+      position: absolute;
+      top: 20px;
+      right: 5px;
+      color: #0894eb;
       background-color: transparent;
       border: none;
       font-size: 14px;
