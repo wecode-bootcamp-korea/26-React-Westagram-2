@@ -76,7 +76,7 @@ class LoginChoi extends Component {
       pwd === pwdConfirm
         ? (this.isVal = true)
         : (this.isVal = false);
-      return this.isVal;
+      return isVal;
     }
   };
 
@@ -222,12 +222,9 @@ class LoginChoi extends Component {
           <button
             onClick={this.goPath}
             disabled={this.checkInput() ? false : true}
-            style={
-              this.checkInput()
-                ? { backgroundColor: '#0095f6' }
-                : { backgroundColor: '#b9dffc' }
-            }
-            className="login-btn"
+            className={`login-btn ${
+              this.checkInput() ? 'active-btn' : 'unactive-btn'
+            }`}
           >
             {type === 'login' ? '로그인' : '회원가입'}
           </button>
