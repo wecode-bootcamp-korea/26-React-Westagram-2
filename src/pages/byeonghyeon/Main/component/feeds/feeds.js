@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
 import Bottom from '../bottom';
-import feedData from '../../../data/FeedData.json';
 import './feeds.scss';
 
 class Feeds extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      feeds: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/feedData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          feeds: data,
+        });
+      });
+  }
+
   render() {
+    let { feeds } = this.state;
     return (
       <div className="feeds">
-        {feedData.map(({ userName, profileImg, feedImg }, index) => {
+        {feeds.map(({ userName, profileImg, feedImg }, index) => {
           return (
             <article key={index} className="feed">
               <div className="profile-container">
