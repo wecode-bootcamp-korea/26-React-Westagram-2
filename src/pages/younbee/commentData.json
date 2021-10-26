@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "jyb_1111",
+    "profileImg": "/images/younbee/sad_1.JPG",
+    "feedImg": "/images/younbee/blueberry_1.JPG"
+  },
+  {
+    "id": 2,
+    "userName": "jdh_2222",
+    "profileImg": "/images/younbee/baby_1.JPG",
+    "feedImg": "/images/younbee/sad_1.JPG"
+  },
+  {
+    "id": 3,
+    "userName": "kws_3333",
+    "profileImg": "/images/younbee/blueberry_1.JPG",
+    "feedImg": "/images/younbee/baby_1.JPG"
+  }
+]

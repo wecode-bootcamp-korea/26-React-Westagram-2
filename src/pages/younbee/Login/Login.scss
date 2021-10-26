@@ -43,15 +43,15 @@
   }
 
   .login-btn {
+    position: absolute;
     width: 268px;
     height: 32px;
-    text-align: center;
-    font-size: 14px;
-    // background-color: #b8daf9;
     color: white;
     border: 1px solid #b2dffc;
     border-radius: 6px;
-    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    // background-color: #b8daf9;
     top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);

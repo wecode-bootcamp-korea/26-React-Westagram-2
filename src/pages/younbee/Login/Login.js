@@ -32,7 +32,6 @@ class LoginYounbee extends Component {
   };
 
   render() {
-    console.log(this.state.loginButton);
     return (
       <div className="login-container">
         <div className="frontText">westagram</div>

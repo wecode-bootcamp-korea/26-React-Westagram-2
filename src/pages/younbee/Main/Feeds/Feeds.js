@@ -2,10 +2,41 @@ import React, { Component } from 'react';
 import './Feeds.scss';
 
 class Feeds extends Component {
-  // 리팩토링
-  // goToLogin = () => {
-  //   this.props.history.push('/login/younbee');
-  // };
+  constructor() {
+    super();
+    this.state = {
+      newComment: '',
+      comments: [],
+    };
+  }
+
+  textChange = e => {
+    this.setState({
+      newComment: e.target.value,
+    });
+  };
+
+  add = () => {
+    let arr = this.state.comments;
+    arr.push({
+      text: this.state.newComment,
+    });
+
+    this.setState({
+      comments: arr,
+      newComments: '',
+    });
+  };
+
+  pressEnter = e => {
+    if (e.key === 'Enter' && this.state.newComment) {
+      this.add();
+      e.target.value = '';
+      this.setState({
+        newComment: '',
+      });
+    }
+  };
 
   render() {
     return (
@@ -72,19 +103,27 @@ class Feeds extends Component {
 
           <div className="many_lines">
             <ul className="items">
-              <li className="item">
-                <span className="itemText">
-                  jyb0924&nbsp;&nbsp;그려... 더보기
-                </span>
-              </li>
+              {this.state.comments.map(el => (
+                <li className="item">
+                  <span className="itemText">{USER_NAME}</span>
+                  {el.text}
+                </li>
+              ))}
             </ul>
           </div>
 
           <hr />
 
           <div className="comment">
-            <input className="input" type="text" placeholder="댓글 달기..." />
-            <button className="itemAdd">
+            <input
+              className="input"
+              type="text"
+              placeholder="댓글 달기..."
+              onChange={this.textChange}
+              onKeyPress={this.pressEnter}
+              value={this.state.newComment}
+            />
+            <button className="itemAdd" onClick={this.add}>
               <a href="javascript:void(0)">게시</a>
             </button>
           </div>
@@ -95,3 +134,5 @@ class Feeds extends Component {
 }
 
 export default Feeds;
+
+const USER_NAME = 'jyb0924 ';
