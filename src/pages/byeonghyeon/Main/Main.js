@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-import '../common.scss';
+import '../commonChoi.scss';
 import './Main.scss';
 import Feeds from './component/feeds/feeds';
 import Right from './component/right/right';

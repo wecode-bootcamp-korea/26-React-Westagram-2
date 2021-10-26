@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-import '../../byeonghyeon/common.scss';
+import '../../byeonghyeon/commonChoi.scss';
 import './Login.scss';
 
 class LoginChoi extends Component {
