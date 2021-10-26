@@ -12,7 +12,6 @@
     right: 5px;
     left: 61px;
     width: 60%;
-
     .article {
       position: absolute;
       display: flex;
@@ -20,6 +19,7 @@
       width: 614px;
       height: 954px;
       padding-bottom: 10px;
+      border: 1px solid lightgray;
 
       .identi {
         position: relative;
@@ -29,8 +29,9 @@
         height: 50px;
 
         .selfi-identi {
-          width: 30px;
-          height: 30px;
+          width: 40px;
+          height: 40px;
+          margin: 5px;
           border-radius: 50%;
         }
 
@@ -46,7 +47,7 @@
 
         .faEllipsisH {
           padding-top: 10px;
-          padding-left: 477px;
+          padding-left: 460px;
           // padding-bottom: 20px;
         }
       }
@@ -65,7 +66,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 170px;
-        padding: 5px 0px 20px 0px;
+        padding: 5px 0px 250px 0px;
 
         .reaction-icons {
           .heart {
@@ -87,8 +88,8 @@
           }
 
           .bookMark {
-            padding-left: 10px;
-            font-size: 40px;
+            // padding-left: 10px;
+            font-size: 30px;
           }
         }
         .like-counts {
@@ -97,6 +98,7 @@
           // padding-top: 20px;
         }
         .check-comments {
+          padding-bottom: 50px;
           span {
             margin-left: 10px;
           }
@@ -107,13 +109,16 @@
       }
       .comment {
         position: relative;
-        // margin-top: 75px;x
+        // bottom: 10px;
+
         .fa-smile-o {
+          margin: 5px;
           font-size: 30px;
         }
         .user-input {
           width: 530px;
           height: 20px;
+          margin: 5px;
         }
         .post {
           height: 25px;

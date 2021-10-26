@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import selfiImg from '../../../assets/images/about.png';
 
 class MainRight extends Component {
   render() {
     return (
       <>
         <div className="top">
-          <img className="selfi" src="../../assets/images/about.png" />
+          <img className="selfi" src={selfiImg} />
           <div className="main-right-name">
             <span id="eng-name">JiwanJeon94</span>
             <br />
@@ -24,42 +25,27 @@ class MainRight extends Component {
           </div>
           <div className="recommendation-people">
             <div id="recommendation-section1">
-              <img
-                id="recommendation-people-selfi"
-                src="../../assets/images/about.png"
-              />
+              <img id="recommendation-people-selfi" src={selfiImg} />
               <span>Recommendation for you</span>
               <a href="">Follow</a>
             </div>
             <div id="recommendation-section1">
-              <img
-                id="recommendation-people-selfi"
-                src="../../assets/images/about.png"
-              />
+              <img id="recommendation-people-selfi" src={selfiImg} />
               <span>Recommendation for you</span>
               <a href="">Follow</a>
             </div>
             <div id="recommendation-section1">
-              <img
-                id="recommendation-people-selfi"
-                src="../../assets/images/about.png"
-              />
+              <img id="recommendation-people-selfi" src={selfiImg} />
               <span>Recommendation for you</span>
               <a href="">Follow</a>
             </div>
             <div id="recommendation-section1">
-              <img
-                id="recommendation-people-selfi"
-                src="../../assets/images/about.png"
-              />
+              <img id="recommendation-people-selfi" src={selfiImg} />
               <span>Recommendation for you</span>
               <a href="">Follow</a>
             </div>
             <div id="recommendation-section1">
-              <img
-                id="recommendation-people-selfi"
-                src="../../assets/images/about.png"
-              />
+              <img id="recommendation-people-selfi" src={selfiImg} />
               <span>Recommendation for you</span>
               <a href="">Follow</a>
             </div>

@@ -1,11 +1,12 @@
 .main-right {
   position: fixed;
   width: 21%;
-  height: 98%;
+  height: 50%;
   top: 11.9%;
   right: 17%;
   display: flex;
   flex-direction: column;
+  border: 1px solid lightgray;
   // padding-bottom: 40px;
   // background-color: red;
   .top {
@@ -17,6 +18,7 @@
     .selfi {
       width: 50px;
       height: 50px;
+      padding: 5px;
       border-radius: 50%;
     }
     .main-right-name {
@@ -28,7 +30,7 @@
       }
     }
     a {
-      margin-left: 70px;
+      margin-left: 77px;
       margin-top: 20px;
     }
   }
@@ -40,10 +42,10 @@
     .middle-words {
       padding-bottom: 25px;
       #recommendation {
-        margin-left: 10px;
+        margin-left: 5px;
       }
       #view-all {
-        margin-left: 100px;
+        margin-left: 210px;
       }
     }
 
@@ -73,8 +75,8 @@
     }
   }
   .footer {
-    // margin-left: 10px;
-    margin-top: 100px;
+    margin-left: 10px;
+    margin-top: 190px;
     .footer-top {
       a {
         margin: 0px 0px 0px 3px;
