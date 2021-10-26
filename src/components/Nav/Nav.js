@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { matchPath } from 'react-router-dom';
+import { Link, matchPath } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import '../../styles/common.scss';
 import './Nav.scss';
@@ -20,14 +20,14 @@ class Nav extends Component {
       return (
         <nav className="main-nav">
           <div className="main-nav-left">
-            <a href="#" className="nav-logo">
+            <Link to="/login/choi" className="nav-logo">
               <div>{this.path}</div>
               <img
                 src="/images/instagram.png"
                 alt="icon"
                 className="nav-logo"
               />
-            </a>
+            </Link>
             <div className="vl" />
             <div className="logo logo-main">Westagram</div>
           </div>
