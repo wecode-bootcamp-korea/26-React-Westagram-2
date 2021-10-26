@@ -53,7 +53,6 @@
         height: 33px;
         margin: 10px 0 5px 0;
         color: white;
-        background-color: #c0dffd;
         border-radius: 5px;
         border-style: none;
         font-size: 15px;
@@ -61,17 +60,11 @@
         cursor: pointer;
       }
 
-      .login_btn_on {
-        width: 100%;
-        height: 33px;
-        margin: 10px 0 5px 0;
-        color: white;
-        background-color: #61adee;
-        border-radius: 5px;
-        border-style: none;
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
+      @at-root .activebtn {
+        background-color: #5ca7ee;
+      }
+      @at-root .unactivebtn {
+        background-color: #b8daf9;
       }
     }
 

@@ -29,7 +29,7 @@ class Feeds extends Component {
   };
 
   changeBgColor = () => {
-    return this.state.cm.length > 0 ? 'btnComment_on' : 'btnComment';
+    return this.state.cm.length > 0 ? 'activebtn' : 'unactivebtn';
   };
 
   render() {
@@ -37,7 +37,7 @@ class Feeds extends Component {
 
     const newCommentList = commentList.map((value, i) => (
       <li className="inputCmt" key={i}>
-        <span className="bold">yeju </span> {value}
+        <span className="bold">yestagram </span> {value}
       </li>
     ));
 
@@ -103,7 +103,7 @@ class Feeds extends Component {
           />
           <button
             type="button"
-            className={this.changeBgColor()}
+            className={`btnComment ${this.changeBgColor()}`}
             onClick={this.clickComment}
           >
             게시

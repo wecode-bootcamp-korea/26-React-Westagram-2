@@ -112,22 +112,17 @@
       position: absolute;
       top: 20px;
       right: 5px;
-      color: #b8e2fd;
       background-color: transparent;
       border: none;
       font-size: 14px;
       font-weight: bold;
     }
 
-    .btnComment_on {
-      position: absolute;
-      top: 20px;
-      right: 5px;
-      color: #0894eb;
-      background-color: transparent;
-      border: none;
-      font-size: 14px;
-      font-weight: bold;
+    @at-root .activebtn {
+      color: #5ca7ee;
+    }
+    @at-root .unactivebtn {
+      color: #b8daf9;
     }
   }
 }

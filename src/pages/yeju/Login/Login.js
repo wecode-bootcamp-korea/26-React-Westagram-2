@@ -24,8 +24,8 @@ class Login extends Component {
   };
   changeHandlerBgColor = () => {
     return this.state.id.includes('@') && this.state.pw.length >= 5
-      ? 'login_btn_on'
-      : 'login_btn';
+      ? 'activebtn'
+      : 'unactivebtn';
   };
 
   render() {
@@ -56,7 +56,7 @@ class Login extends Component {
             <button
               type="submit"
               onClick={this.validationCheck}
-              className={this.changeHandlerBgColor()}
+              className={`login_btn ${this.changeHandlerBgColor()}`}
             >
               로그인
             </button>
