@@ -1,20 +1,20 @@
 @import '../common.scss';
 
 .login-container {
+  position: relative;
   width: 350px;
   height: 380px;
   margin: 20px auto;
-  border: 1px solid lightgray;
-  position: relative;
   margin-top: 15%;
+  border: 1px solid lightgray;
 
   .frontText {
-    font-family: 'Lobster', cursive;
-    font-weight: 400;
-    font-size: 42px;
     position: absolute;
     top: 17%;
     left: 50%;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    font-size: 42px;
     transform: translate(-50%, -50%);
   }
 

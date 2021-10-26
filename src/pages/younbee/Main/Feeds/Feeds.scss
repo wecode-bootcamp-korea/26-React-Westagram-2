@@ -3,8 +3,8 @@
 .feeds {
   .container {
     margin-top: 150px;
-    border: 1px solid lightgray;
     width: 610px;
+    border: 1px solid lightgray;
     background-color: white;
 
     .line {
@@ -63,11 +63,11 @@
     }
 
     .heart_line {
-      display: flex;
-      align-items: center;
       position: absolute;
-      top: 780px;
+      display: flex;
       margin-left: 8px;
+      top: 780px;
+      align-items: center;
 
       img {
         width: 30px;
@@ -78,11 +78,11 @@
     }
 
     .many_lines {
-      display: flex;
-      align-items: center;
       position: absolute;
-      top: 820px;
+      display: flex;
       margin-left: 60px;
+      align-items: center;
+      top: 820px;
 
       ul {
         margin-top: 10px;
@@ -97,8 +97,8 @@
 
       input {
         width: 90%;
-        margin-left: 10px;
         height: 50px;
+        margin-left: 10px;
         border: 1px solid white;
         background-color: white;
       }

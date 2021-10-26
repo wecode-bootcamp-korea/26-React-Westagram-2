@@ -1,23 +1,23 @@
 @import '../../common.scss';
 
 .main-right {
+  width: 320px;
+  height: 600px;
   margin-top: 150px;
   margin-left: 100px;
   margin-right: 10px;
   border: 1px solid transparent;
-  width: 320px;
-  height: 600px;
   z-index: -90;
 
   .id {
-    height: 50px;
     position: relative;
+    height: 50px;
 
     img.me1 {
+      position: absolute;
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      position: absolute;
     }
 
     span {
@@ -35,14 +35,14 @@
   }
 
   .story {
-    border: 1px solid lightgray;
+    position: relative;
     width: 320px;
     height: 250px;
     margin-top: 25px;
     margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
     background-color: white;
+    border: 1px solid lightgray;
+    overflow: hidden;
 
     .seeall {
       display: flex;
@@ -66,22 +66,21 @@
     }
 
     .story_photo {
+      position: relative;
       display: flex;
+      margin-top: 5px;
       flex-direction: column;
       justify-content: space-between;
-      margin-top: 5px;
-      position: relative;
 
       img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
         position: relative;
         margin-left: 10px;
-        border-radius: 50%;
         margin-top: 1px;
-        border: 3px solid transparent;
         margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+        border: 3px solid transparent;
+        border-radius: 50%;
         background-image: linear-gradient(#e66465, #ff7f00),
           linear-gradient(#e66465, #ff7f00, #fe019a, #ff00ff, #d070fb);
         background-origin: border-box;
@@ -91,16 +90,16 @@
 
       span {
         position: absolute;
+        left: 70px;
         font-size: 16px;
         font-weight: 400;
-        left: 70px;
       }
 
       div {
         position: absolute;
+        left: 70px;
         font-size: 14px;
         font-weight: 200;
-        left: 70px;
       }
     }
 
@@ -147,10 +146,10 @@
 // 이것도 리팩토링 하자...
 
 .recommend {
-  border: 1px solid lightgray;
+  position: relative;
   width: 320px;
   height: 200px;
-  position: relative;
+  border: 1px solid lightgray;
   background-color: white;
 
   .recommend_foryou {
@@ -175,22 +174,22 @@
   }
 
   .recommend_photo img {
-    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
     width: 40px;
     height: 40px;
     margin-left: 20px;
     margin-top: 12px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 50%;
     justify-content: space-between;
   }
 
   .id_recommend {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin-left: 70px;
     font-size: 13px;
+    justify-content: space-between;
 
     .recommend_id1 {
       position: absolute;
@@ -211,8 +210,8 @@
   .id_likes {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin-left: 70px;
+    justify-content: space-between;
     font-size: 10px;
 
     .recommend_time1 {
@@ -236,10 +235,10 @@
     flex-direction: column;
     justify-content: space-between;
     margin-left: 240px;
+    margin-top: -100px;
     font-size: 16px;
     font-weight: 700;
     color: #1da1f6;
-    margin-top: -100px;
   }
 
   .follow {
