@@ -18,7 +18,9 @@ class RegisterChoi extends Component {
     };
     this.type = 'register';
   }
-  goPath = () => {
+  goPath = event => {
+    if (event.type === 'keyup' && event.keyCode !== 13) return;
+
     let { name, id, pwd, contact, birth, hobby } = this.state;
     let { history } = this.props;
 
@@ -69,7 +71,7 @@ class RegisterChoi extends Component {
           <h1 className="logo logo-login">Westagram</h1>
         </header>
         <div className="login-form">
-          <form className="login-input-container">
+          <form onKeyUp={this.goPath} className="login-input-container">
             <input
               type="text"
               className="login-input"

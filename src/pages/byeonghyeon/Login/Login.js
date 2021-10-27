@@ -15,7 +15,8 @@ class LoginChoi extends Component {
     this.type = 'login';
   }
   goPath = event => {
-    console.log(event);
+    if (event.type === 'keyup' && event.keyCode !== 13) return;
+
     let { id, pwd } = this.state;
     let { history } = this.props;
 
