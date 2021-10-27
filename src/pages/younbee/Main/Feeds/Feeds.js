@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Child from './Child';
 import './Feeds.scss';
 
 class Feeds extends Component {
@@ -103,12 +104,13 @@ class Feeds extends Component {
 
           <div className="many_lines">
             <ul className="items">
-              {this.state.comments.map(el => (
+              <Child commentList={this.state.comments} />
+              {/* {this.state.comments.map(el => (
                 <li className="item">
                   <span className="itemText">{USER_NAME}</span>
                   {el.text}
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
 

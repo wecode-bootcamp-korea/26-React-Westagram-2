@@ -1,0 +1,107 @@
+@import '../common.scss';
+
+.login-container1 {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin: 20px auto;
+  margin-top: 10%;
+  border: 1px solid lightgray;
+
+  .frontText {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    font-size: 42px;
+    transform: translate(-50%, -50%);
+  }
+
+  input {
+    width: 268px;
+    height: 38px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    background-color: #fafafa;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+  }
+
+  input#name {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input#email {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input#re-password {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input#contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input#date-of-birth {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input#hobby {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login-btn {
+    position: absolute;
+    width: 268px;
+    height: 32px;
+    color: white;
+    border: 1px solid #b2dffc;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    // background-color: #b8daf9;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @at-root .activebtn {
+      background-color: #5ca7ee;
+      // background-color: red;
+    }
+
+    @at-root .unactivebtn {
+      background-color: #b8daf9;
+      // background-color: red;
+    }
+  }
+
+  .bottomText {
+    position: absolute;
+    color: #385185;
+    font-size: 13px;
+    font-weight: 900;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
