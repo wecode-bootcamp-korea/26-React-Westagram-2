@@ -9,7 +9,11 @@ class Nav extends Component {
     let {
       location: { pathname },
     } = this.props;
-    if (matchPath(pathname, { path: '/login/:username' })) return true;
+    if (
+      matchPath(pathname, { path: `/login/:username` }) ||
+      matchPath(pathname, { path: `/register/:username` })
+    )
+      return true;
     else return false;
   }
 

@@ -1,44 +1,53 @@
-import { React, Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../byeonghyeon/commonChoi.scss';
-import './Login.scss';
+import './Register.scss';
 
-class LoginChoi extends Component {
+class RegisterChoi extends Component {
   constructor(props) {
     super(props);
     this.regExp =
       /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
     this.state = {
+      name: '',
       id: '',
       pwd: '',
+      contact: '',
+      birth: '',
+      hobby: '',
     };
-    this.type = 'login';
+    this.type = 'register';
   }
-  goPath = event => {
-    console.log(event);
-    let { id, pwd } = this.state;
+  goPath = () => {
+    let { name, id, pwd, contact, birth, hobby } = this.state;
     let { history } = this.props;
 
-    fetch('http://10.58.1.129:8000/users/login', {
+    fetch('http://10.58.1.129:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
+        name,
         email: id,
         password: pwd,
+        contact,
+        date_of_birth: birth,
+        hobby,
       }),
     })
       .then(res => res.json())
       .then(res => {
         if (res.message === 'SUCCESS') {
-          history.push('/main/choi');
+          history.push('/login/choi');
         }
       });
   };
 
   checkInput = () => {
-    let { id, pwd } = this.state;
+    let { name, id, pwd, contact, birth, hobby } = this.state;
     let isVal = false;
 
-    (id && pwd) !== '' && this.regExp.test(id) && pwd.length >= 5
+    (name && id && pwd && contact && birth && hobby) !== '' &&
+    this.regExp.test(id) &&
+    pwd.length >= 5
       ? (isVal = true)
       : (isVal = false);
     return isVal;
@@ -53,17 +62,25 @@ class LoginChoi extends Component {
   };
 
   render() {
-    let { id, pwd } = this.state;
+    let { name, id, pwd, contact, birth, hobby } = this.state;
     return (
       <section className="login-container">
         <header className="login-header">
           <h1 className="logo logo-login">Westagram</h1>
         </header>
         <div className="login-form">
-          <form onKeyUp={this.goPath} className="login-input-container">
+          <form className="login-input-container">
             <input
               type="text"
-              className="login-input input-id"
+              className="login-input"
+              placeholder="사용자 이름"
+              defaultValue={name}
+              name="name"
+              onChange={this.checkVal}
+            />
+            <input
+              type="text"
+              className="login-input"
               placeholder="사용자 이메일"
               defaultValue={id}
               name="id"
@@ -71,10 +88,34 @@ class LoginChoi extends Component {
             />
             <input
               type="password"
-              className="login-input input-password"
-              placeholder="비밀번호"
+              className="login-input"
+              placeholder="사용자 비밀번호"
               defaultValue={pwd}
               name="pwd"
+              onChange={this.checkVal}
+            />
+            <input
+              type="text"
+              className="login-input"
+              placeholder="사용자 전화번호"
+              defaultValue={contact}
+              name="contact"
+              onChange={this.checkVal}
+            />
+            <input
+              type="text"
+              className="login-input"
+              placeholder="사용자 생년월일"
+              defaultValue={birth}
+              name="birth"
+              onChange={this.checkVal}
+            />
+            <input
+              type="text"
+              className="login-input"
+              placeholder="사용자 취미"
+              defaultValue={hobby}
+              name="hobby"
               onChange={this.checkVal}
             />
           </form>
@@ -85,12 +126,12 @@ class LoginChoi extends Component {
               this.checkInput() ? 'active-btn' : 'unactive-btn'
             }`}
           >
-            로그인
+            회원가입
           </button>
         </div>
         <footer>
           <div className="register-link-container">
-            <Link to="/register/choi" className="register-link">
+            <Link to="/login/choi" className="register-link">
               {this.type === 'login' ? '회원가입' : '로그인'}
             </Link>
           </div>
@@ -100,4 +141,5 @@ class LoginChoi extends Component {
     );
   }
 }
-export default LoginChoi;
+
+export default RegisterChoi;
