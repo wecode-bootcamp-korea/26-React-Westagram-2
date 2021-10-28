@@ -23,6 +23,16 @@ class Login extends Component {
     });
   };
 
+  checkInput = event => {
+    let isValue = false;
+    this.state.inputIdValue.indexOf('@') !== -1 &&
+    this.state.inputPwValue.length >= 5
+      ? (isValue = true)
+      : (isValue = false);
+
+    return isValue;
+  };
+
   loadToMain = () => {
     // this.props.history.push('/main/jiwan');
     fetch('http://10.58.1.234:8000/jbj/login', {
@@ -73,18 +83,8 @@ class Login extends Component {
 
             <div className="bt">
               <button
-                className={
-                  this.state.inputIdValue.indexOf('@') !== -1 &&
-                  this.state.inputPwValue.length >= 5
-                    ? 'buttonAble'
-                    : 'buttonDisable'
-                }
-                dissabled={
-                  this.state.inputIdValue.indexOf('@') !== -1 &&
-                  this.state.inputPwValue.length >= 5
-                    ? false
-                    : true
-                }
+                className={this.checkInput() ? 'buttonAble' : 'buttonDisable'}
+                dissabled={this.checkInput() ? false : true}
                 onClick={this.loadToMain}
               >
                 Log in
