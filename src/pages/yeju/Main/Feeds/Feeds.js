@@ -5,42 +5,56 @@ class Feeds extends Component {
   constructor() {
     super();
     this.state = {
-      cm: '',
       commentList: [],
+      comment: {
+        userName: 'yestagram',
+        content: '',
+      },
     };
   }
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
+      comment: {
+        ...this.state.comment,
+        content: e.target.value,
+      },
     });
   };
 
   clickComment = e => {
     this.setState({
-      commentList: this.state.commentList.concat(this.state.cm),
-      cm: '',
+      commentList: this.state.commentList.concat(this.state.comment),
+      comment: {
+        ...this.state.comment,
+        content: '',
+      },
     });
   };
+
   handleKeyPress = e => {
     if (e.key === 'Enter') {
       this.clickComment();
     }
   };
 
-  changeBgColor = () => {
-    return this.state.cm.length > 0 ? 'activebtn' : 'unactivebtn';
+  changeBtnColor = () => {
+    return this.state.comment.content.length > 0 ? 'activebtn' : 'unactivebtn';
   };
 
+  componentDidMount() {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          commentList: data,
+        });
+      });
+  }
   render() {
-    const { cm, commentList } = this.state;
-
-    const newCommentList = commentList.map((value, i) => (
-      <li className="inputCmt" key={i}>
-        <span className="bold">yestagram </span> {value}
-      </li>
-    ));
-
+    const { comment, commentList } = this.state;
     return (
       <article className="feeds">
         <div className="feeds-title">
@@ -86,7 +100,14 @@ class Feeds extends Component {
             </div>
             <div id="CMT_WRITE" className="feedComment" />
             <ul>
-              <li>{newCommentList}</li>
+              {commentList.map((el, i) => {
+                return (
+                  <li className="inputCmt" key={i}>
+                    <span className="bold">{el.userName} </span>
+                    {el.content}
+                  </li>
+                );
+              })}
             </ul>
             <p className="feedTime">42분 전</p>
           </div>
@@ -95,15 +116,14 @@ class Feeds extends Component {
           <input
             className="inputComment"
             type="text"
-            name="cm"
             onChange={this.handleChange}
             onKeyPress={this.handleKeyPress}
-            value={cm}
+            value={comment.content}
             placeholder="댓글 달기..."
           />
           <button
             type="button"
-            className={`btnComment ${this.changeBgColor()}`}
+            className={`btnComment ${this.changeBtnColor()}`}
             onClick={this.clickComment}
           >
             게시
