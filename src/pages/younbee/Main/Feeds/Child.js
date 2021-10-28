@@ -6,9 +6,9 @@ class Child extends Component {
     return (
       <>
         {this.props.commentList.map(el => (
-          <li className="item">
-            <span className="itemText">{USER_NAME}</span>
-            {el.text}
+          <li key={el.id} className="item">
+            <span className="itemText">{el.userName} </span>
+            {el.talks}
           </li>
         ))}
       </>

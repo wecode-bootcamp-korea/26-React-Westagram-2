@@ -8,7 +8,23 @@ class Feeds extends Component {
     this.state = {
       newComment: '',
       comments: [],
+      commentList: [],
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/younbeejee/commentData.json')
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({
+          commentList: res,
+        });
+        console.log(this.state.commentList);
+        // if (res.success) {
+        //   console.log(res);
+        // }
+      });
   }
 
   textChange = e => {
@@ -104,13 +120,13 @@ class Feeds extends Component {
 
           <div className="many_lines">
             <ul className="items">
-              <Child commentList={this.state.comments} />
+              <Child commentList={this.state.commentList} />
               {/* {this.state.comments.map(el => (
-                <li className="item">
-                  <span className="itemText">{USER_NAME}</span>
-                  {el.text}
-                </li>
-              ))} */}
+                  <li className="item">
+                    <span className="itemText">{USER_NAME}</span>
+                    {el.text}
+                  </li>
+                ))} */}
             </ul>
           </div>
 
