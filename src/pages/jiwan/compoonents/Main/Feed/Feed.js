@@ -14,6 +14,7 @@ class Feed extends Component {
     super();
     this.state = {
       value: '',
+      commentList: [],
       feedInfo: [],
     };
   }
@@ -36,7 +37,7 @@ class Feed extends Component {
 
   addComment = () => {
     this.setState({
-      commentList: this.state.commentList.concat([this.state.value]),
+      commentList: this.state.commentList.concat(this.state.value),
       value: '',
     });
   };
@@ -90,6 +91,9 @@ class Feed extends Component {
                   <a href="">Check the all comments</a>
                   <ul className="feed-comments">
                     <Comment commentAddList={feedInfo.comment} />
+                    {this.state.commentList.map((comm, idx) => {
+                      return <li key={idx}>{comm}</li>;
+                    })}
                   </ul>
                 </div>
               </div>
