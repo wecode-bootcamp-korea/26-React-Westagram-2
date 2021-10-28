@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Comment from '../Comment/Comment';
 import './Feeds.scss';
 
 class Feeds extends Component {
@@ -14,19 +15,21 @@ class Feeds extends Component {
   }
 
   handleChange = e => {
+    let { comment } = this.state;
     this.setState({
       comment: {
-        ...this.state.comment,
+        ...comment,
         content: e.target.value,
       },
     });
   };
 
   clickComment = e => {
+    let { commentList, comment } = this.state;
     this.setState({
-      commentList: this.state.commentList.concat(this.state.comment),
+      commentList: commentList.concat(comment),
       comment: {
-        ...this.state.comment,
+        ...comment,
         content: '',
       },
     });
@@ -39,7 +42,8 @@ class Feeds extends Component {
   };
 
   changeBtnColor = () => {
-    return this.state.comment.content.length > 0 ? 'activebtn' : 'unactivebtn';
+    let { comment } = this.state;
+    return comment.content.length > 0 ? 'activebtn' : 'unactivebtn';
   };
 
   componentDidMount() {
@@ -55,6 +59,7 @@ class Feeds extends Component {
   }
   render() {
     const { comment, commentList } = this.state;
+
     return (
       <article className="feeds">
         <div className="feeds-title">
@@ -100,14 +105,7 @@ class Feeds extends Component {
             </div>
             <div id="CMT_WRITE" className="feedComment" />
             <ul>
-              {commentList.map((el, i) => {
-                return (
-                  <li className="inputCmt" key={i}>
-                    <span className="bold">{el.userName} </span>
-                    {el.content}
-                  </li>
-                );
-              })}
+              <Comment commentList={commentList} />
             </ul>
             <p className="feedTime">42분 전</p>
           </div>

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import '../Feeds/Feeds.scss';
 
-class Comment extends React.Component {
+class Comment extends Component {
   render() {
     return (
-      <li>
-        <span>{this.props.userName}</span>
-        <span>{this.props.content}</span>
-      </li>
+      <>
+        {this.props.commentList.map((el, i) => {
+          return (
+            <li className="inputCmt" key={i}>
+              <span className="bold">{el.userName} </span>
+              {el.content}
+            </li>
+          );
+        })}
+      </>
     );
   }
 }
