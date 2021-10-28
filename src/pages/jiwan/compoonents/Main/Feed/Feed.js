@@ -8,6 +8,7 @@ import {
   FaEllipsisH,
 } from 'react-icons/fa';
 import Comment from '../../../compoonents/Comment/Comment';
+import CommentPost from '../../Comment/CommentPost';
 
 class Feed extends Component {
   constructor() {
@@ -91,9 +92,10 @@ class Feed extends Component {
                   <a href="">Check the all comments</a>
                   <ul className="feed-comments">
                     <Comment commentAddList={feedInfo.comment} />
-                    {this.state.commentList.map((comm, idx) => {
+                    <CommentPost commentList={this.state.commentList} />
+                    {/* {this.state.commentList.map((comm, idx) => {
                       return <li key={idx}>{comm}</li>;
-                    })}
+                    })} */}
                   </ul>
                 </div>
               </div>
