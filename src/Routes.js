@@ -12,6 +12,7 @@ import MainYeju from './pages/yeju/Main/Main';
 
 import LoginYounbee from './pages/younbee/Login/Login';
 import MainYounbee from './pages/younbee/Main/Main';
+import RegisterYounbee from './pages/younbee/Register/Register';
 
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
@@ -31,6 +32,7 @@ class Routes extends Component {
           <Route exact path="/main/yeju" component={MainYeju} />
 
           <Route exact path="/login/younbee" component={LoginYounbee} />
+          <Route exact path="/register/younbee" component={RegisterYounbee} />
           <Route exact path="/main/younbee" component={MainYounbee} />
         </Switch>
       </BrowserRouter>
