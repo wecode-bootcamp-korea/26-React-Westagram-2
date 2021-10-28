@@ -1,0 +1,19 @@
+$color-white: #ffffff;
+$border-line: 1px solid #dbdbdb;
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inner-img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}

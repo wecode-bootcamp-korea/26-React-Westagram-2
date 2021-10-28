@@ -1,0 +1,128 @@
+@import '../../common.scss';
+
+.feeds {
+  position: absolute;
+  width: 65%;
+  left: 0;
+  margin-bottom: 40px;
+  background-color: $color-white;
+  border: $border-line;
+  border-radius: 3px;
+
+  .feeds-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+
+    .feeds-profile {
+      display: flex;
+      align-items: center;
+
+      .feeds-profile-img {
+        width: 33px;
+        height: 33px;
+        margin-right: 10px;
+        border-radius: 70%;
+        overflow: hidden;
+
+        img {
+          @include inner-img-fit;
+        }
+      }
+
+      .feeds-dsc {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .feeds-img {
+    height: 642px;
+    overflow: hidden;
+
+    img {
+      @include inner-img-fit;
+    }
+  }
+
+  .feeds-bottom {
+    padding: 12px 12px 0px 12px;
+
+    .feeds-icon {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      color: #414141;
+
+      i {
+        margin-right: 10px;
+        font-size: 28px;
+      }
+    }
+
+    .feedLikes {
+      .feedLtext {
+        margin-bottom: 10px;
+
+        .textBold {
+          font-weight: bold;
+        }
+      }
+      .feedDsc {
+        margin-bottom: 10px;
+
+        .textBold {
+          font-weight: bold;
+        }
+
+        .feedDscMore {
+          margin-left: 5px;
+          color: #8e8e8e;
+        }
+      }
+      .inputCmt {
+        margin: 8px 0 8px 0;
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+
+      .feedTime {
+        margin-bottom: 5px;
+        color: #8e8e8e;
+      }
+    }
+  }
+
+  .comment {
+    position: relative;
+
+    .inputComment {
+      width: 100%;
+      height: 50px;
+      padding: 0 60px 0 20px;
+      border: none;
+      border-top: $border-line;
+      outline: transparent;
+    }
+
+    .btnComment {
+      position: absolute;
+      top: 20px;
+      right: 5px;
+      background-color: transparent;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    @at-root .activebtn {
+      color: #5ca7ee;
+    }
+    @at-root .unactivebtn {
+      color: #b8daf9;
+    }
+  }
+}
