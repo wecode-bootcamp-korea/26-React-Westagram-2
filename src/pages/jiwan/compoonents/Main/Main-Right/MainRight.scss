@@ -1,0 +1,91 @@
+.main-right {
+  position: fixed;
+  width: 21%;
+  height: 50%;
+  top: 11.9%;
+  right: 17%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  // padding-bottom: 40px;
+  // background-color: red;
+  .top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+
+    .selfi {
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border-radius: 50%;
+    }
+    .main-right-name {
+      position: relative;
+      padding-left: 13px;
+      padding-top: 10px;
+      #kr-name {
+        opacity: 0.3;
+      }
+    }
+    a {
+      margin-left: 77px;
+      margin-top: 20px;
+    }
+  }
+  .middle {
+    height: 30%;
+    padding-bottom: 100px;
+    position: relative;
+
+    .middle-words {
+      padding-bottom: 25px;
+      #recommendation {
+        margin-left: 5px;
+      }
+      #view-all {
+        margin-left: 210px;
+      }
+    }
+
+    .recommendation-people {
+      display: flex;
+      flex-direction: column;
+      #recommendation-section1 {
+        #recommendation-people-selfi {
+          width: 40px;
+          height: 40px;
+          margin-top: 13px;
+          padding: 5px 5px 5px 5px;
+          border-radius: 50%;
+        }
+        span {
+          position: relative;
+          right: 0px;
+          top: -18px;
+        }
+        a {
+          position: absolute;
+          margin-top: 25px;
+          right: 3px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-left: 10px;
+    margin-top: 190px;
+    .footer-top {
+      a {
+        margin: 0px 0px 0px 3px;
+        opacity: 0.3;
+      }
+    }
+  }
+  span {
+    margin-left: 5px;
+    opacity: 0.3;
+  }
+}

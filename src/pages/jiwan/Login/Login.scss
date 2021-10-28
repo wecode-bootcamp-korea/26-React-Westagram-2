@@ -1,0 +1,78 @@
+// *{
+//   padding: 0;
+//   margin: 0;
+//   text-decoration: none;
+//   list-style: none;
+//   box-sizing: border-box;
+// }
+
+@mixin button-layout($background-color) {
+  width: 100%;
+  height: 45px;
+  border: solid 1px #d3d3d3;
+  border-radius: 5px;
+  padding-left: 15px;
+  background-color: $background-color;
+}
+
+@font-face {
+  font-family: instagramFont;
+  src: url('../assets/westagram.ttf') format('opentype');
+}
+// border box content box difference
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  margin: 250px 250px 250px 250px;
+  padding: 50px;
+  border: solid 1px #d3d3d3;
+
+  .logo {
+    .westagram {
+      font-size: 60%;
+      font-family: instagramFont;
+      font-size: 5rem;
+    }
+  }
+
+  .login-container {
+    width: 400px;
+    height: 300px;
+
+    .id {
+      margin-top: 70px;
+
+      #text {
+        @include button-layout(white);
+      }
+    }
+
+    .pw {
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      #password {
+        @include button-layout(white);
+      }
+    }
+
+    .bt {
+      .buttonAble {
+        @include button-layout(#5ca7ee);
+        padding-left: 0px;
+        cursor: pointer;
+      }
+
+      .buttonDisable {
+        @include button-layout(#b2dffc);
+        padding-left: 0px;
+        cursor: pointer;
+        opacity: 0.3;
+      }
+    }
+  }
+}

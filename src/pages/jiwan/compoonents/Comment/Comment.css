@@ -1,0 +1,11 @@
+.commentContainer {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.commentUserName {
+  font-weight: bold;
+}
+
+.commentContent {
+}

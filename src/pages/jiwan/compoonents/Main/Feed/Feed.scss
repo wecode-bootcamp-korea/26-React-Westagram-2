@@ -1,0 +1,138 @@
+.main {
+  position: relative;
+  top: 70px;
+  margin-left: 12%;
+  // padding-bottom: 10px:
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+
+  .feeds {
+    position: relative;
+    top: 40px;
+    right: 5px;
+    left: 61px;
+    width: 60%;
+    height: 942px;
+    .article {
+      display: flex;
+      flex-direction: column;
+      width: 614px;
+      height: 954px;
+      padding-bottom: 10px;
+      border: 1px solid lightgray;
+      padding-bottom: 100px;
+      margin-bottom: 50px;
+
+      .identi {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 50px;
+
+        .selfi-identi {
+          width: 40px;
+          height: 40px;
+          margin: 5px;
+          border-radius: 50%;
+        }
+
+        .name {
+          margin-top: 10px;
+          margin-left: 5px;
+        }
+
+        #test {
+          padding-top: 23px;
+          padding-left: 410px;
+        }
+
+        .faEllipsisH {
+          padding-top: 10px;
+          padding-left: 460px;
+          // padding-bottom: 20px;
+        }
+      }
+      .pic {
+        #feed-pic {
+          position: relative;
+          padding: 3px 3px 3px 3px;
+          width: 614px;
+          height: 614px;
+          padding: 5px 0px 2px 0px;
+        }
+      }
+      .show-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 170px;
+        padding: 5px 0px 250px 0px;
+
+        .reaction-icons {
+          .heart {
+            padding-left: 10px;
+            // padding-right: 10px;
+            font-size: 40px;
+            // width: 30px;
+          }
+
+          .showBoxComment {
+            padding-left: 10px;
+            // padding-right: 5px;
+            font-size: 40px;
+          }
+          .plane {
+            padding-left: 10px;
+            margin-right: 460px;
+            font-size: 40px;
+          }
+
+          .bookMark {
+            // padding-left: 10px;
+            font-size: 30px;
+          }
+        }
+        .like-counts {
+          padding-left: 10px;
+          // margin-top: 10px;
+          // padding-top: 20px;
+        }
+        .check-comments {
+          padding-bottom: 50px;
+          span {
+            margin-left: 10px;
+          }
+          .space {
+            padding-top: 400px;
+          }
+        }
+      }
+      .comment {
+        position: relative;
+        // padding-bottom: 20px;
+        top: -15px;
+        .fa-smile-o {
+          margin: 5px;
+          font-size: 30px;
+        }
+        .user-input {
+          width: 530px;
+          height: 20px;
+          margin: 5px;
+          top: 10px;
+        }
+        .post {
+          height: 25px;
+          border: solid 1px #d3d3d3;
+          border-radius: 5px;
+          background-color: #b2dffc;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
