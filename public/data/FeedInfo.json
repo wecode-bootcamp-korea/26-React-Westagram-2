@@ -1,10 +1,9 @@
 [
   {
     "key": 1,
-    "id": "test",
-    "selfiImg": "selfi-img",
-    "feedImg": "ucscPic",
-    "describtion": "This is super coooooool!",
+    "id": "Jiwan Jeon",
+    "selfiImg": "/image/about.png",
+    "feedImg": "/image/ucscPic.png",
     "comment": [
       {
         "id": 1,
@@ -28,13 +27,13 @@
   },
   {
     "key": 2,
-    "id": "test",
-    "selfiImg": "selfi-img",
-    "feedImg": "ucscPic",
+    "id": "Jieun",
+    "selfiImg": "/image/about.png",
+    "feedImg": "/image/ucscPic.png",
     "comment": [
       {
         "id": 1,
-        "userName": "wecode",
+        "userName": "jieun",
         "content": "Welcome to world best coding bootcamp!",
         "isLiked": true
       },
@@ -54,9 +53,9 @@
   },
   {
     "key": 3,
-    "id": "test",
-    "selfiImg": "selfi-img",
-    "feedImg": "ucscPic",
+    "id": "Tiamo-Ara",
+    "selfiImg": "/image/about.png",
+    "feedImg": "/image/ucscPic.png",
     "comment": [
       {
         "id": 1,

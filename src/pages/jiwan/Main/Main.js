@@ -8,14 +8,14 @@ import MainRight from '../compoonents/Main/Main-Right/MainRight';
 class Main extends Component {
   render() {
     return (
-      <div class="main-wrapper">
+      <div className="main-wrapper">
         <Nav />
 
-        <div class="main">
+        <div className="main">
           <Feed />
         </div>
 
-        <div class="main-right">
+        <div className="main-right">
           <MainRight />
         </div>
       </div>

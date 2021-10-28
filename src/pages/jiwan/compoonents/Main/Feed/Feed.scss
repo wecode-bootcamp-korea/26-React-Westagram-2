@@ -2,6 +2,7 @@
   position: relative;
   top: 70px;
   margin-left: 12%;
+  // padding-bottom: 10px:
   width: 100%;
   height: 100%;
   z-index: -10;
@@ -12,14 +13,15 @@
     right: 5px;
     left: 61px;
     width: 60%;
+    height: 942px;
     .article {
-      position: absolute;
       display: flex;
       flex-direction: column;
       width: 614px;
       height: 954px;
       padding-bottom: 10px;
       border: 1px solid lightgray;
+      padding-bottom: 100px;
 
       .identi {
         position: relative;
@@ -76,7 +78,7 @@
             // width: 30px;
           }
 
-          .comment {
+          .showBoxComment {
             padding-left: 10px;
             // padding-right: 5px;
             font-size: 40px;
@@ -109,8 +111,8 @@
       }
       .comment {
         position: relative;
-        // bottom: 10px;
-
+        // padding-bottom: 20px;
+        top: -15px;
         .fa-smile-o {
           margin: 5px;
           font-size: 30px;
@@ -119,6 +121,7 @@
           width: 530px;
           height: 20px;
           margin: 5px;
+          top: 10px;
         }
         .post {
           height: 25px;

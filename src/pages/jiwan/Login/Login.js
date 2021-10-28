@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Login.scss';
-// import './src/pages/jiwan/assets/westagram.ttf';
+import { withRouter } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -21,6 +21,24 @@ class Login extends Component {
     this.setState({
       inputPwValue: `${event.target.value}`,
     });
+  };
+
+  loadToMain = () => {
+    // this.props.history.push('/main/jiwan');
+    fetch('http://10.58.1.234:8000/jbj/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.inputIdValue,
+        password: this.state.inputPwValue,
+      }),
+    })
+      .then(res => res.json())
+      .then(result => {
+        if (result.toekn)
+          // console.log(result);
+          return this.props.history.push('/main/jiwan');
+        else return alert('fail');
+      });
   };
 
   render() {
@@ -67,6 +85,7 @@ class Login extends Component {
                     ? false
                     : true
                 }
+                onClick={this.loadToMain}
               >
                 Log in
               </button>
@@ -82,4 +101,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
