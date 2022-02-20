@@ -73,7 +73,7 @@ class LoginChoi extends Component {
             <input
               type="password"
               className="login-input input-password"
-              placeholder="비밀번호"
+              placeholder="사용자 비밀번호"
               defaultValue={pwd}
               name="pwd"
               onChange={this.checkVal}
