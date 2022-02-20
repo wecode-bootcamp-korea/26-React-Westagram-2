@@ -2,6 +2,7 @@ import { React, Component } from 'react';
 import Nav from './components/Nav/Nav';
 
 import LoginChoi from './pages/byeonghyeon/Login/Login';
+import RegisterChoi from './pages/byeonghyeon/Register/Register';
 import MainChoi from './pages/byeonghyeon/Main/Main';
 
 import LoginJiwan from './pages/jiwan/Login/Login';
@@ -22,6 +23,7 @@ class Routes extends Component {
         <Nav />
         <Switch>
           <Route exact path="/login/choi" component={LoginChoi} />
+          <Route exact path="/register/choi" component={RegisterChoi} />
           <Route exact path="/main/choi" component={MainChoi} />
 
           <Route exact path="/login/jiwan" component={LoginJiwan} />

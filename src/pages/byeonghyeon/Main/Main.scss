@@ -1,0 +1,12 @@
+.body-container {
+  width: 100%;
+}
+.main-container {
+  width: 75%;
+  margin: 90px auto;
+  display: flex;
+  @media (min-width: 1280px) {
+    width: 60%;
+    margin: 110px auto;
+  }
+}
